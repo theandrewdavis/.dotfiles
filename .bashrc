@@ -1,5 +1,5 @@
 # Set the prompt to include the hostname and directory
-export PS1="\h:\W\$ "
+export PS1="\h: \W\$ "
 
 # Colorize ls output and use human-readable file sizes
 alias ls='ls -Gh'
