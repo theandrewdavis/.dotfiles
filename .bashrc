@@ -2,13 +2,10 @@
 export PS1="\h: \W\$ "
 
 # For OSX, colorize ls output and use human-readable file sizes
-[ "$OSTYPE" = ^darwin ] && alias ls='ls -Gh'
-
-# For OSX, colorize ls output and use human-readable file sizes
-[ "$OSTYPE" = ^linux ] && alias ls='ls -Gh'
+[[ "$OSTYPE" = darwin* ]] && alias ls='ls -Gh'
 
 # For Ubuntu, colorize ls output and use human-readable file sizes
-[ "$(cat /etc/issue 2> /dev/null)" = Ubuntu ] && alias ls='ls --color -h'
+[[ "$OSTYPE" = linux* ]] && alias ls='ls --color -h'
 
 # Colorize grep output
 alias grep='grep --color'
