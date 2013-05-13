@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=( .vimrc .tmux.conf .gitconfig .bash_profile .bashrc )
+DOTFILES=( .vimrc .tmux.conf .gitconfig .gitignore_global .bash_profile .bashrc )
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 for DOTFILE in ${DOTFILES[@]}; do
