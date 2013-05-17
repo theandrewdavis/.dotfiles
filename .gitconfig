@@ -5,4 +5,4 @@
 	ui = true
 [core]
 	autocrlf = input
-	excludesfile = /home/ubuntu/.gitignore_global
+	excludesfile = ~/.gitignore_global
