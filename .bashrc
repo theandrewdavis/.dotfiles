@@ -12,7 +12,7 @@ alias grep='grep --color'
 
 # Git shortcuts
 alias gs='git status'
-alias gl='git log --oneline'
+alias gl='git log --oneline -10'
 
 # If a .bashrc.local exists, source it. This should include bash configuration
 # specific to the current machine.
