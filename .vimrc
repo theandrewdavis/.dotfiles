@@ -1,14 +1,9 @@
 " Enable syntax highlighting
 syntax on
 
-" Tabs are 4 spaces long
-set tabstop=4
+" Tabs are 4 spaces long, the automatic reindent command uses 4 spaces, and
+" spaces are inserted instead of tabs.
+set tabstop=4 shiftwidth=4 expandtab
 
-" Use 4 spaces for the reindent command and automatic indentation
-set shiftwidth=4
-
-" Insert spaces when tab is pressed
-set expandtab
-
-" Show line numbers
-set number
+" Don't wrap long lines
+set nowrap
