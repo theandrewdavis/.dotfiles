@@ -6,5 +6,8 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
+
+# 'git push' will push the current branch to its upstream branch, but will refuse to push if the
+# upstream's branch's name is different from the local one
 [push]
-	default = current
+	default = simple
