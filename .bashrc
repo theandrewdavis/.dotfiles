@@ -17,3 +17,6 @@ alias gl='git log --oneline -10'
 # If a .bashrc.local exists, source it. This should include bash configuration
 # specific to the current machine.
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
+# Put /usr/local/bin before /usr/bin at Homebrew's reccomendation
+export PATH="/usr/local/bin:$PATH"
