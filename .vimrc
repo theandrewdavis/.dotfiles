@@ -1,9 +1,18 @@
+" Use pathogen to manage plugin loading and import plugin help documentation
+call pathogen#infect()
+Helptags
+
 " Enable syntax highlighting
 syntax on
 
-" Tabs are 4 spaces long, the automatic reindent command uses 4 spaces, and
-" spaces are inserted instead of tabs.
-set tabstop=4 shiftwidth=4 expandtab
+" Change indentation settings based on filetype
+filetype plugin indent on
 
 " Don't wrap long lines
 set nowrap
+
+" Use indentation-based code folding in Python, starting with all folds open
+autocmd Filetype python setlocal foldmethod=indent foldlevel=99
+
+" Toggle a file browser with \n
+map <leader>n :NERDTreeToggle<CR>
