@@ -1,6 +1,6 @@
-# vim
+* vim
 
-## Folding
+	* Folding
 * See vim help with `:h folding` and `:h usr_28.txt`
 ### Folding options
 * Show a bar of the left to indicate folding with `:set foldcolumn={width}`
