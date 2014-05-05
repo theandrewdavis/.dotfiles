@@ -1,88 +1,81 @@
 * vim
+* Folding
+  * See vim help sections folding and usr_28.txt
+  * Folding options
+    * Show a bar of the left to indicate folding with foldcolumn={width}
+    * Manually control folds with foldmethod=manual
+    * Automatically set folds based on indentation with foldmethod=indent, where
+    one level of fold is set for each shiftwidth of indentation
+    * Set the nesting level below which all folds are closed with
+    foldlevel={number}, eg: foldlevel=99 to open all folds
+  * Folding commands
+    * Manually fold lines with zf{motion}, eg: zfip to fold a paragraph
+    * Open folds with zo, close them with zc, and toggle them with za
+    * Delete a fold at the cursor line with zd
+    * Toggle disabling and enabling folding with zi
+    * Increase the foldlevel with zm and decrease it with zr
+    * Move to the beginning of a fold with [z and the end with ]z
+* Motions
+  * See vim help section motion.txt
+  * Horizontal motions
+    * Move left with h and right with l
+    * Move to the beginning of a line with 0 and the end with $
+    * Move to the first non-blank character in a line with ^ and the last
+    non-blank character with g_
+    * Move to a column in the current line with |, eg: 80| for the 80th column
+  * Vertical motions
+    * Move up with k and down with j
+    * Move to the end of the buffer with G and the beginning with gg
+    * Move to a percentage of the buffer with %, eg: 50% to move to the halfway
+    point of the buffer
+    * Move to the top of the window with H, the middle with M and the bottom
+    with L
+  * Word and paragraph motions
+    * Move forward one word with w or one WORD with W where WORDs are separated
+    by blank characters and words are separated by blank or special characters
+    * Move backward one word with b or one WORD with B
+    * Move forward to the end of a word with e or a WORD with E
+    * Move backwards to the end of a word with ge or a WORD with gE
+    * Move forward one paragraph with } or back with { where a paragraphs are
+    separated by blank lines
+  * Selection motions
+    * Motions starting with a reference an outer selection and motions starting
+    with i reference an inner selection
+    * Experiment with these by using viusal mode, eg: viw
+    * Select a word with aw and a WORD with aW
+    * Select a paragraph with ap
+    * Select a block of text surrounded by () with a(, by <> with a<, by HTML
+    tags with at, by {} with a{, by "" with a", by '' with a', and by `` with a`
+* Windows
+  * See vim help sections windows.txt and usr_07.txt
+  * Window commands
+    * Split the current window horizontally  with :split, open a new empy window
+    with :new, and open another file in a window with :open {filename}
+    * Split the current window vertically with :vsplit
+    * Close the current window with :close or all other windows with :only
+    * Switch windows directionally with C-w h, C-w j, C-w k, and C-w l, switch
+    to the top window with C-w t and bottom with C-w b, and cycle between
+    windows with C-w C-w
+    * Move windows directionally with C-w H, C-w J, C-w K, and C-w L
+  * Window size
+    * Specify the size of a new window with :{height}split or :{width}vsplit
+    * Set the current window height with :resize {height} and the width with
+    :verical resize {width}
+    * Adjust the current window height down with C-w - and up with C-w +
+    * Adjust the current window width down with C-w < and up with C-w >
+    * Resize windows to equal dimensions with C-w =
+* Tabs
+  * See vim help sections tabpage.txt and usr_08.txt
+  * Open a new tab for the current file with :tab split, a new tab for another
+  file with :tabedit {filename}, or a new empty tab with :tabnew
+  * Close the current tab with :tabclose or all other tabs with :tabonly
+  * Go to the next tab with gt or the previous with gT
+  * Move a tab to a different position with tabmove {number}, eg: :tabmove 0 to
+  make the current tab the first tab
+* File Browser
+  * See vim help section NERD_tree.txt
+  * More info at http://usevim.com/2012/07/18/nerdtree/
+* Help
+  * Open help with :help or open a help topic with :help {topic}
+  * Navigate |bookmarks| by jumping with C-] and jumping back with C-O
 
-	* Folding
-* See vim help with `:h folding` and `:h usr_28.txt`
-### Folding options
-* Show a bar of the left to indicate folding with `:set foldcolumn={width}`
-* Manually control folds with `:set foldmethod=manual`
-* Automatically set folds based on indentation with `:set foldmethod=indent`,
-  where one level of fold is set for each `shiftwidth` of indentation
-* Set the nesting level below which all folds are closed with
-  `:set foldlevel={number}`, eg: `:set foldlevel=99` to open all folds
-### Folding commands
-* Manually fold lines with `zf{motion}`, eg: `zfip`
-* Open folds with `zo`, close them with `zc`, and toggle them with `za`
-* Delete a fold at the cursor line with `zd`
-* Toggle disabling and enabling folding with `zi`
-* Increase the `foldlevel` with `zm` and decrease it with `zr`
-* Move to the beginning of a fold with `[z` and the end with `]z`
-
-## Motions
-* See vim help with `:h motion.txt`
-### Horizontal motions
-* Move left with `h` and right with `l`
-* Move to the beginning of a line with `0` and the end with `$`
-* Move to the first non-blank character in a line with `^` and the last
-  non-blank character with `g_`
-* Move to a column in the current line with `|`, eg: `80|` for the 80th column
-### Vertical motions
-* Move up with `k` and down with `j`
-* Move to the end of the buffer with `G` and the beginning with `gg`
-* Move to a percentage of the buffer with `%`, eg: `50%` to move to the
-  halfway point of the buffer
-* Move to the top of the window with `H`, the middle with `M` and the bottom
-  with `L`
-### Word and paragraph motions
-* Move forward one word with `w` or one WORD with `W` where WORDs are separated
-  by blank characters and words are separated by blank or special characters
-* Move backward one word with `b` or one WORD with `B`
-* Move forward to the end of a word with `e` or a WORD with `E`
-* Move backwards to the end of a word with `ge` or a WORD with `gE`
-* Move forward one paragraph with `}` or back with `{` where a paragraphs are
-  separated by blank lines
-### Selection motions
-* Motions starting with `a` reference an outer selection and motions starting
-  with `i` reference an inner selection
-* Experiment with these by using viusal mode, eg: `viw`
-* Select a word with `aw` and a WORD with `aW`
-* Select a paragraph with `ap`
-* Select a block of text surrounded by () with `a(`, by <> with `a<`, by HTML
-  tags with `at`, by {} with `a{`, by "" with `a"`, by '' with `a'`, and by `
-  with `a``
-
-## Windows
-* See vim help with `:h windows.txt` or `:h usr_07.txt`
-### Window commands
-* Split the current window horizontally  with `:split`, open a new empy window
-  with `:new`, and open another file in a window with `:open {filename}`
-* Split the current window vertically with `:vsplit`
-* Close the current window with `:close` or all other windows with `:only`
-* Switch windows directionally with `C-w h`, `C-w j`, `C-w k`, and `C-w l`,
-  switch to the top window with `C-w t` and bottom with `C-w b`, and cycle
-  between windows with `C-w C-w`
-* Move windows directionally with `C-w H`, `C-w J`, `C-w K`, and `C-w L`
-### Window size
-* Specify the size of a new window with `:{height}split` or `:{width}vsplit`
-* Set the current window height with `:resize {height}` and the width with
-  `:verical resize {width}`
-* Adjust the current window height down with `C-w -` and up with `C-w +`
-* Adjust the current window width down with `C-w <` and up with `C-w >`
-* Resize windows to equal dimensions with `C-w =`
-
-## Tabs
-* See vim help with `:h tabpage.txt` or `:h usr_08.txt`
-* Open a new tab for the current file with `:tab split`, a new tab for another
-  file with `:tabedit {filename}`, or a new empty tab with `:tabnew`
-* Close the current tab with `:tabclose` or all other tabs with `:tabonly`
-* Go to the next tab with `gt` or the previous with `gT`
-* Move a tab to a different position with `tabmove {number}`, eg: `:tabmove 0`
-  to make the current tab the first tab
-
-## File Browser
-* See vim help with `:h NERD_tree.txt`
-* More info at http://usevim.com/2012/07/18/nerdtree/
-
-## Help
-* Open help with `:help` or open a help topic with `:help topic`
-* Navigate |bookmarks| by jumping with `C-]` and jumping back with `C-O`
-- 
