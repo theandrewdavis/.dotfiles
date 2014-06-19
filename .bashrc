@@ -1,3 +1,6 @@
+# Use emacs mode in bash
+set -o emacs
+
 # Set the prompt to include the hostname and directory
 export PS1="\h: \W\$ "
 
