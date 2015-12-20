@@ -1,5 +1,9 @@
-# Use emacs mode in bash
-set -o emacs
+# Use vi mode in bash, remap 'jk' to switch to vi normal mode, and use Ctrl-L to
+# clear the screen in both normal and insert modes
+bind -m vi-insert '"jk" "\e"'
+bind -m vi-insert "\C-l":clear-screen
+bind -m vi-move "\C-l":clear-screen
+set -o vi
 
 # Set the prompt to include the hostname and directory
 export PS1="\h: \W\$ "
