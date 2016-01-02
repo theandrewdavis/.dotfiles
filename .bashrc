@@ -21,6 +21,9 @@ alias grep='grep --color'
 alias gs='git status'
 alias gl='git log --oneline -10'
 
+# For OSX, create a command line shortcut for Sublime Text 3
+[[ "$OSTYPE" = darwin* ]] && alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 # If a .bashrc.local exists, source it. This should include bash configuration
 # specific to the current machine.
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
